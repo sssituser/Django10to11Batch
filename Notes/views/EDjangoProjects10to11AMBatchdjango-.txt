@@ -1,0 +1,57 @@
+E:\DjangoProjects10to11AMBatch>django-admin startproject testproject
+E:\DjangoProjects10to11AMBatch>cd testproject
+E:\DjangoProjects10to11AMBatch/testproject> py manage.py startapp myapp
+E:\DjangoProjects10to11AMBatch/testproject>py manage.py runserver
+E:\DjangoProjects10to11AMBatch/testproject>code .
+======================================================================
+1.goto--> myapp
+2.open	views.py
+-----------------------
+3. In views.py
+----------------------
+from django.shortcuts import render,HttpResponse
+# Create your views here.
+def home(request):
+    return HttpResponse("<h2>Hi Iam home function views.py </h2>")
+-----------------------------------
+4.Goto urls.py in project
+-----------------------------------
+from myapp import views
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',views.home),
+]
+================================================
+1.views.py
+-----------------------------------------------------------
+from django.shortcuts import render,HttpResponse
+# Create your views here.
+def home(request):
+    return HttpResponse("<h2>Hi Iam home function views.py </h2>")
+
+def register(request):
+    return HttpResponse("<h2>Hi Iam register function from views.py</h2>")
+
+def login(request):
+    return HttpResponse("<h2>Hi Iam Login function from views.py</h2>")
+-------------------------------------------------------------------------
+2.In project  urls.py
+-------------------------------------------------------------------------
+from django.contrib import admin
+from django.urls import path
+from myapp import views
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',views.home),
+    path('register/',views.register),
+    path('login/',views.login),
+]
+
+
+
+
+
+
+
+
+
