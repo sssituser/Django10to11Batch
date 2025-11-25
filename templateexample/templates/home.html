@@ -1,0 +1,31 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Home Page</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Departement</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for emp in emps%}
+                <tr>
+                    <td>{{emp.id}}</td>
+                    <td>{{emp.name}}</td>
+                    <td>{{emp.dept}}</td>
+                    <td>{{emp.salary}}</td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </body>
+    </html>
