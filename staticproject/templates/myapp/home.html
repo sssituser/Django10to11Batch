@@ -6,16 +6,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-       <link rel="stylesheet" href="{%static 'css/mystyle.css'%}">
-
-       <!-- Bootstrap JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
-
-<!-- Material Design Bootstrap JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/js/mdb.min.js"></script>
-
+    <link rel="stylesheet" href="{%static 'css/mystyle.css'%}">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/css/mdb.min.css" rel="stylesheet">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <h2 style="color:red">Home Page</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                  <div class="card-body">
+                     <img src="{%static 'images/img1.jpg'%}" class="img-fluid" height="200px" width="200px" alt="">
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
