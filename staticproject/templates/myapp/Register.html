@@ -10,5 +10,10 @@
 </head>
 <body>
     <h2 style="color:green">Register Page</h2>
+    <form action="" method="POST">
+        {{empForm.as_p}}
+        {%csrf_token%}
+        <button>Register</button>
+    </form>
 </body>
 </html>

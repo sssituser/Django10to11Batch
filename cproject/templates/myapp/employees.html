@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{%extends 'myapp/base.html'%}
+{% block body_block %}
+    <p class="h1 text-center">Employees Page</p>
+    <div class="container text-center">
+        <p class="lead text-start">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil ipsam est dolorum porro eveniet voluptate minus sapiente facere. Minima iusto suscipit quasi aliquam expedita temporibus eum quod odit, praesentium autem inventore et architecto corporis, consequatur accusantium animi odio? Temporibus, dicta.</p>
+        
+        <a href="{%url 'register'%}" class="btn btn-primary btn-sm float-start mb-5">Register</a>
+
+        <table class="table table-bordered">
+            <thead >
+                <tr >
+                    <th class="bg-primary text-white">Employee ID</th>
+                    <th class="bg-primary text-white">Employee Name</th>
+                    <th class="bg-primary text-white">Employee Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                    {%for emp in empList%}
+                        <tr>
+                            <td>{{emp.eid}}</td>
+                            <td>{{emp.ename}}</td>
+                            <td>{{emp.esal}}</td>
+                        </tr>
+                    {%endfor%}
+            </tbody>
+        </table>
+    </div>
+{%endblock%}
