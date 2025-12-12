@@ -13,7 +13,8 @@
                     <div class="card-body">
                         <form action="" method="POST">
                             {{form.as_p}}
-                            <button class="btn btn-md btn-primary">ADD</button>
+                            <button class="btn btn-md btn-primary float-sm-start">ADD</button>
+                            <a href="{%url 'abc'%}" class="btn btn-md btn-danger float-end">Back</a>
                             {%csrf_token%}
                         </form>
                     </div>

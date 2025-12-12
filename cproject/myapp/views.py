@@ -32,6 +32,27 @@ def employees(request):
     return render(request,'myapp/employees.html',{'empList':empList})
 
 
+from django.shortcuts import get_object_or_404
+from myapp.models import Employee
+
+def view(request,id):
+    emp = get_object_or_404(Employee,id=id)
+    return render(request,'myapp/show.html',{'emp':emp})
+
+def edit(request, id):
+    emp = get_object_or_404(Employee, id=id)
+
+    if request.method == 'POST':
+        empRec = EmployeeForm(request.POST, instance=emp)
+        if empRec.is_valid():
+            empRec.save()
+            return redirect('abc')   # 👈 return is required
+
+    # GET request → show existing data
+    form = EmployeeForm(instance=emp)
+    return render(request, 'myapp/edit.html', {'form': form})
+
+
 
 
 

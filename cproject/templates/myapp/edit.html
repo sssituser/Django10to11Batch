@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{%extends 'myapp/base.html'%}
+
+{%block body_block%}
+    <p class="h1 text-warning text-center">Edit Page</p>
+    <div class="container text-center">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="card">
+
+                            <div class="card-header bg-secondary text-white">
+                                    <p class="h3">Edit Employee</p>
+                            </div>
+
+
+                            <div class="card-body">
+                                <form action="" method="POST">
+
+                                    {{form.as_p}}
+                                    {%csrf_token%}
+                                    <button class="btn btn-md btn-primary">Save</button>
+                                    <a href="{%url 'abc'%}" class="btn btn-md btn-danger">Cancel</a>
+                                </form>
+                            </div>
+                    </div>  
+                </div>
+            </div>
+
+
+
+    </div>
+{%endblock%}

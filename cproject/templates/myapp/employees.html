@@ -10,17 +10,27 @@
         <table class="table table-bordered">
             <thead >
                 <tr >
+                    <th class="bg-primary text-white">ID</th>
+
                     <th class="bg-primary text-white">Employee ID</th>
                     <th class="bg-primary text-white">Employee Name</th>
                     <th class="bg-primary text-white">Employee Salary</th>
+                    <th class="bg-primary text-white">Actions</th>
+
                 </tr>
             </thead>
             <tbody>
                     {%for emp in empList%}
                         <tr>
+                            <td>{{emp.id}}</td>
                             <td>{{emp.eid}}</td>
                             <td>{{emp.ename}}</td>
                             <td>{{emp.esal}}</td>
+                            <td>
+                                <a href="{%url 'view'  emp.id%}">View</a>
+                                <a href="{%url 'edit'   emp.id%}">Edit</a>
+                                <a href="">Delete</a>
+                            </td>
                         </tr>
                     {%endfor%}
             </tbody>
